@@ -9,6 +9,14 @@ public class TruongPhong extends Person {
 	private final String chucVu = "trưởng phòng";
 	private final double luong = 200;
 
+	public int getSoThanhVien() {
+		return soThanhVien;
+	}
+
+	public void setSoThanhVien(int soThanhVien) {
+		this.soThanhVien = soThanhVien;
+	}
+
 	@Override
 	public void nhap() {
 		super.nhap();

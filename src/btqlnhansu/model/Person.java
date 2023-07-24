@@ -7,7 +7,7 @@ public class Person {
 	private String hoTen;
 	private String sdt;
 	private int soNgayLam;
-	private double luong;
+	protected double luong;
 	protected double luongThang;
 	private String chucVu;
 
@@ -34,8 +34,14 @@ public class Person {
 		System.out.println("Nhập số ngày làm việc: ");
 		this.soNgayLam = sc.nextInt();
 		sc.nextLine();
-		System.out.println("Nhập chức vụ: ");
-		this.chucVu = sc.nextLine();
+	}
+	public void xuat() {
+		System.out.println("Mã số: " + getMaSo());
+		System.out.println("Họ tên: " + getHoTen());
+		System.out.println("SDT: " + getSdt());
+		System.out.println("Số ngày làm: " + getSoNgayLam());
+		System.out.println("Chuc vu: " + getChucVu());
+		System.out.println("Lương: " + getLuong());
 	}
 
 	public String getMaSo() {
@@ -65,6 +71,14 @@ public class Person {
 
 	public void setHoTen(String hoTen) {
 		this.hoTen = hoTen;
+	}
+
+	public double getLuongThang() {
+		return luongThang;
+	}
+
+	public void setLuongThang(double luongThang) {
+		this.luongThang = getLuong() * getSoNgayLam();
 	}
 
 	public String getSdt() {
